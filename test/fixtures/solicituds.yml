@@ -1,0 +1,103 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  PrimerNombre: MyString
+  PrimerApellido: MyString
+  Genero: MyString
+  FechaNacimiento: MyString
+  TipoDocumento: MyString
+  cc: 1
+  FechaNacimiento: 2021-03-24 17:21:08
+  cellphone: 1
+  cellphone2: 1
+  Whatsapp: MyString
+  CorreoElectronico: MyString
+  MunicipioRes: MyString
+  DepartamentoRes: MyString
+  Vereda: MyString
+  DireccionRes: MyString
+  TipoVivienda: MyString
+  ResidenciaYears: 1.5
+  NivelEstudios: MyString
+  PersonasCargo: MyString
+  ViveDondeTrabaja: MyString
+  MunicipioTrabajo: MyString
+  DepartamentoTrabajo: MyString
+  IngresoPpl: MyString
+  OtrosIngresos: MyString
+  ProduccionPpl: MyString
+  Producto1: MyString
+  Producto1Diferente: MyString
+  ProduccionSec: MyString
+  Producto2: MyString
+  Producto2Diferente: MyString
+  ExperienciaSectorAgropecuario: 1.5
+  ExperienciaActividad: 1.5
+  HectareasProductivas: 1
+  Tenencia: MyString
+  ViaAcceso: MyString
+  IngresoMensual: 1.5
+  CostoActividad: 1.5
+  GastosFamiliares: 1.5
+  TipoSol: MyString
+  TipoSolicitante: MyString
+  Productosolicitado: MyString
+  MontoSolicitado: 1.5
+  Objetivo: MyString
+  Plazo: 1
+  Garantia: MyString
+  FuentePago: MyString
+  familiar_reference_1: 
+  familiar_reference_2: 
+  personal_reference_1: 
+
+two:
+  PrimerNombre: MyString
+  PrimerApellido: MyString
+  Genero: MyString
+  FechaNacimiento: MyString
+  TipoDocumento: MyString
+  cc: 1
+  FechaNacimiento: 2021-03-24 17:21:08
+  cellphone: 1
+  cellphone2: 1
+  Whatsapp: MyString
+  CorreoElectronico: MyString
+  MunicipioRes: MyString
+  DepartamentoRes: MyString
+  Vereda: MyString
+  DireccionRes: MyString
+  TipoVivienda: MyString
+  ResidenciaYears: 1.5
+  NivelEstudios: MyString
+  PersonasCargo: MyString
+  ViveDondeTrabaja: MyString
+  MunicipioTrabajo: MyString
+  DepartamentoTrabajo: MyString
+  IngresoPpl: MyString
+  OtrosIngresos: MyString
+  ProduccionPpl: MyString
+  Producto1: MyString
+  Producto1Diferente: MyString
+  ProduccionSec: MyString
+  Producto2: MyString
+  Producto2Diferente: MyString
+  ExperienciaSectorAgropecuario: 1.5
+  ExperienciaActividad: 1.5
+  HectareasProductivas: 1
+  Tenencia: MyString
+  ViaAcceso: MyString
+  IngresoMensual: 1.5
+  CostoActividad: 1.5
+  GastosFamiliares: 1.5
+  TipoSol: MyString
+  TipoSolicitante: MyString
+  Productosolicitado: MyString
+  MontoSolicitado: 1.5
+  Objetivo: MyString
+  Plazo: 1
+  Garantia: MyString
+  FuentePago: MyString
+  familiar_reference_1: 
+  familiar_reference_2: 
+  personal_reference_1: 
