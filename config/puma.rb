@@ -23,7 +23,7 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 
 
 bind "unix:///var/run/puma.sock?umask=0000"
-
+pidfile "/var/run/puma/my_app.sock"
 stdout_redirect "/var/log/puma.stdout.log", "/var/log/puma.stderr.log", true
 
 # Specifies the `pidfile` that Puma will use.
