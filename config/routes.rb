@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   get 'originacion/testeo'
   #root :to => 'originacion#testeo'
   get 'originacion/index_solicitudes'
-  post 'originacion/crear_solicitud'
+  get 'originacion/crear_solicitud'
   #root :to => 'originacion#crear_solicitud'
-  #get 'originacion/revisar_parametros'
+  post 'originacion/revisar_parametros'
   #get 'originacion/index_solicitudes'
   
   
