@@ -1,22 +1,24 @@
 class OriginacionController < ApplicationController
 
     def testeo
-        render json: 'Hola desde el api Core'
+        @originacion = "{'succes':'Hola desde el api Core'}"
+        render succes: @originacion
     end
     
     def revisar_parametros
-        require 'json'
-        value = JSON.parse(params[:store])
-        puts value
+        #require 'json'
+        #value = JSON.parse(params[:store])
+        #puts value
+
         render json: params, status:200
-      end
+    end
     
     def index_solicitudes
-        solicitudes = Solicitud.all
-        render json: solicitudes, status:200
+        @originacion = Solicitud.all
+        render json: @originacion, status:200
     end 
     def crear_solicitud
-        Solicitud.new(
+        @originacion = Solicitud.new(
             Estado: params[:Estado],
             PrimerNombre: params[:PrimerNombre],
             PrimerApellido: params[:PrimerApellido],
@@ -80,5 +82,12 @@ class OriginacionController < ApplicationController
             familiar_reference_2: JSON.parse(params[:familiar_reference_2]),
             personal_reference_1: JSON.parse(params[:personal_reference_1]),
             )
+        
+        if @originacion.save
+            render json: @originacion
+        else
+            
+            render error: {error: 'No fue posible guardar la solicitud'}, status: 400
+        end
     end
 end
