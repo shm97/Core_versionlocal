@@ -14,11 +14,13 @@ class OriginacionController < ApplicationController
     end
     
     def index_solicitudes
-        @originacion = Solicitud.all
-        render json: @originacion, status:200
+        Nueva_Solicitud = Solicitud.all
+        render json: Nueva_Solicitud, status:200
     end 
     def crear_solicitud
-        @originacion = Solicitud.new(
+        puts 'DEBUG 1 EN CREAR SOLICITUD'
+        require 'json'
+        Nueva_Solicitud = Solicitud.new(
             Estado: params[:Estado],
             PrimerNombre: params[:PrimerNombre],
             PrimerApellido: params[:PrimerApellido],
@@ -82,9 +84,9 @@ class OriginacionController < ApplicationController
             familiar_reference_2: JSON.parse(params[:familiar_reference_2]),
             personal_reference_1: JSON.parse(params[:personal_reference_1]),
             )
-        
-        if @originacion.save
-            render json: @originacion
+        put 'DEBUG 2 EN CREAR SOLICITUD'
+        if Nueva_Solicitud.save
+            render json: Nueva_Solicitud
         else
             
             render error: {error: 'No fue posible guardar la solicitud'}, status: 400
