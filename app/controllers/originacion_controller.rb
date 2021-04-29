@@ -18,8 +18,7 @@ class OriginacionController < ApplicationController
         render json: Nueva_Solicitud, status:200
     end 
     def crear_solicitud
-        puts 'DEBUG 1 EN CREAR SOLICITUD'
-        
+                
         Nueva_Solicitud = Solicitud.new(
             Estado: params[:Estado],
             PrimerNombre: params[:PrimerNombre],
@@ -84,7 +83,7 @@ class OriginacionController < ApplicationController
             familiar_reference_2: JSON.parse(params[:familiar_reference_2]),
             personal_reference_1: JSON.parse(params[:personal_reference_1]),
             )
-        put 'DEBUG 2 EN CREAR SOLICITUD'
+        
         if Nueva_Solicitud.save
             render json: Nueva_Solicitud
         else
