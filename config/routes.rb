@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'originacion/testeo'
   #root :to => 'originacion#testeo'
   get 'originacion/index_solicitudes'
-  get 'originacion/crear_solicitud'
+  post 'originacion/crear_solicitud'
   #root :to => 'originacion#crear_solicitud'
   post 'originacion/revisar_parametros'
   #get 'originacion/index_solicitudes'

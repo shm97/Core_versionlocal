@@ -19,7 +19,7 @@ class OriginacionController < ApplicationController
     end 
     def crear_solicitud
         puts 'DEBUG 1 EN CREAR SOLICITUD'
-        require 'json'
+        
         Nueva_Solicitud = Solicitud.new(
             Estado: params[:Estado],
             PrimerNombre: params[:PrimerNombre],
