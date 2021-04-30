@@ -14,12 +14,12 @@ class OriginacionController < ApplicationController
     end
     
     def index_solicitudes
-        Nueva_Solicitud = Solicitud.all
-        render json: Nueva_Solicitud, status:200
+        solicitudes = Solicitud.all
+        render json: solicitudes, status:200
     end 
     def crear_solicitud
                 
-        Nueva_Solicitud = Solicitud.new(
+        solicitud = Solicitud.new(
             Estado: params[:Estado],
             PrimerNombre: params[:PrimerNombre],
             PrimerApellido: params[:PrimerApellido],
@@ -85,7 +85,7 @@ class OriginacionController < ApplicationController
             )
         
         if Nueva_Solicitud.save
-            render json: Nueva_Solicitud
+            render json: solicitud
         else
             
             render error: {error: 'No fue posible guardar la solicitud'}, status: 400
