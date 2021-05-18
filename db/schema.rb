@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_27_224631) do
+ActiveRecord::Schema.define(version: 2021_05_04_165747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
@@ -87,6 +87,15 @@ ActiveRecord::Schema.define(version: 2021_04_27_224631) do
     t.hstore "tesoreria_obj"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "pasword_digest"
+    t.string "password_digest"
   end
 
 end

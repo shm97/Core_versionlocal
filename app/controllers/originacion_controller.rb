@@ -17,6 +17,13 @@ class OriginacionController < ApplicationController
         solicitudes = Solicitud.all
         render json: solicitudes, status:200
     end 
+
+    def lambda
+        require 'net/http'
+        result = Net::HTTP.get(URI.parse('https://6ls42syxm5.execute-api.us-east-2.amazonaws.com/pruebas/pruebas'))
+        render json: result
+    end
+
     def crear_solicitud
                 
         solicitud = Solicitud.new(

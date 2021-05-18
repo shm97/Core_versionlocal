@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   post 'originacion/revisar_parametros'
   #get 'originacion/index_solicitudes'
   
-  
-
+  post 'sesion/create'
+  post 'sesion/login'
+  get 'sesion/auto_login'
 
 end
