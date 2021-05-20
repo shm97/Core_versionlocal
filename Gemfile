@@ -5,11 +5,15 @@ ruby '>=2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 #gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
-gem 'rails', '~>6.1.1'
+gem 'rails', '6.1.3.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 # Use Puma as the app server
-gem 'puma', '~> 5.0', groups: [:development, :test]
+gem 'puma', '~> 5.0'
+
+group :production do
+  gem 'puma'
+end
 
 gem 'jwt'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
