@@ -21,11 +21,41 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
+
+#development:
+#  solicitudes:
+#    database: core_back_development
+#    username: postgres
+#    password: AcNhz97Amme
+
+#  codeudores:
+#    database: core_back_development_codeudores
+#    username: postgres
+#    password: AcNhz97Amme
+#    migrations_paths: db/animals_migrate
+
+
+
+#development:
+#  <<: *default
+#  database: core_back_development
+#  username: postgres
+#  password: AcNhz97Amme
+
+
 development:
-  <<: *default
-  database: core_back_development
-  username: postgres
-  password: AcNhz97Amme
+  solicitudes:
+    database: solicitudes_prueba
+    username: postgres
+    password: AcNhz97Amme
+    adapter: postgresql
+
+  codeudores:
+    database: codeudores_core
+    username: postgres
+    password: AcNhz97Amme
+    adapter: postgresql
+    migrations_paths: db/codeudores_migrate
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,10 +88,28 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: core_back_test
-  username: postgres
-  password: AcNhz97Amme
+  
+#  solicitudes:
+#    database: core_back_test
+#    username: postgres
+#    password: AcNhz97Amme
+  solicitudes:
+    database: solicitudes_prueba
+    username: postgres
+    password: AcNhz97Amme
+    adapter: postgresql
+
+  codeudores:
+    database: codeudores_core_test
+    username: postgres
+    password: AcNhz97Amme
+    adapter: postgresql
+    migrations_paths: db/codeudores_migrate
+
+    
+  
+  
+  
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -84,7 +132,28 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: core_back_production
-  username: postgres
-  password: AcNhz97Amme
+
+#solicitudes:
+#    database: core_back_production
+#    username: postgres
+#    password: AcNhz97Amme
+
+#  codeudores:
+#    database: core_back_production_codeudores
+#    username: postgres
+#    password: AcNhz97Amme
+#    migrations_paths: db/animals_migrate
+
+
+  solicitudes:
+    database: solicitudes_prueba
+    username: postgres
+    password: AcNhz97Amme
+    adapter: postgresql
+
+  codeudores:
+    database: codeudores_core_prod
+    username: postgres
+    password: AcNhz97Amme
+    adapter: postgresql
+    migrations_paths: db/codeudores_migrate

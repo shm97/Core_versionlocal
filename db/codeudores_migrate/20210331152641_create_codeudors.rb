@@ -1,6 +1,9 @@
-class CreateSolicituds < ActiveRecord::Migration[6.1]
+class CreateCodeudors < ActiveRecord::Migration[6.1]
+  def connection
+    ActiveRecord::Base.establish_connection("codeudores".to_sym).connection
+  end
   def change
-    create_table :solicituds do |t|
+    create_table :codeudors do |t|
       t.string :PrimerNombre
       t.string :PrimerApellido
       t.string :Genero
